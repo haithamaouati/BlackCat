@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Shows the video creator's region and the viewer's region in an alert
 // @author       Haitham Aouati
+// @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
 // @run-at       document-end
 // @match        https://*/*
 // @grant        none
