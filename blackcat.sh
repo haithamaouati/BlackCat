@@ -159,4 +159,3 @@ VIEWER_COUNTRY=$(get_country_name "$VIEWER_REGION")
 printf "Type\tCode\tCountry\nCreator Region\t%s\t%s\nViewer Region\t%s\t%s\n" \
     "$CREATOR_REGION" "$CREATOR_COUNTRY" \
     "$VIEWER_REGION" "$VIEWER_COUNTRY" | column -t -s $'\t'
-echo
