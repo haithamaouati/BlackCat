@@ -85,8 +85,7 @@ echo -e "      \)${nc}"
 print_banner
 
 # 3. Display message and wait 10 seconds before fetching
-echo -e "\nRetrieving the region for user ${bold_green}@$USERNAME${nc}...\n"
-sleep 10
+echo -e "\nRetrieving the region for user ${bold_green}@$USERNAME${nc}...\n" | pv -qL 10
 
 CREATOR_REGION=""
 VIEWER_REGION=""
@@ -159,3 +158,4 @@ VIEWER_COUNTRY=$(get_country_name "$VIEWER_REGION")
 printf "Type\tCode\tCountry\nCreator Region\t%s\t%s\nViewer Region\t%s\t%s\n" \
     "$CREATOR_REGION" "$CREATOR_COUNTRY" \
     "$VIEWER_REGION" "$VIEWER_COUNTRY" | column -t -s $'\t'
+echo -e "\nIf the result shown is ${bold_yellow}N/A${nc}, please wait a moment and try again!\n"
