@@ -76,4 +76,4 @@ And [follow me](https://github.com/haithamaouati) to keep up with future updates
 
 ## License
 
-BalckCat is licensed under [GLWTPL license](LICENSE).
+BalckCat is licensed under [GLWTS license](LICENSE).
