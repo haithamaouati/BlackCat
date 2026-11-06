@@ -6,7 +6,7 @@
 // @author       Haitham Aouati
 // @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
 // @run-at       document-end
-// @match        https://tiktok.com/*
+// @match        https://*/*
 // @grant        none
 // @license      WTFPL
 // @downloadURL  https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js
