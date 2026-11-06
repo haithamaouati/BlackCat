@@ -41,6 +41,7 @@ The script requires the following dependencies:
 
 - **curl**: `pkg install curl - y`
 - **jq**: `pkg install jq -y`
+- **pv**: `pkg install pv -y`
 - **column**: `pkg install util-linux -y`
 
 > [!IMPORTANT]  
