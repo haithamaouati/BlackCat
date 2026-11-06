@@ -9,9 +9,9 @@
 // @match        https://tiktok.com/*
 // @grant        none
 // @license      WTFPL
-// @downloadURL  https://github.com/haithamaouati/BlackCat/userscript.js
+// @downloadURL  https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js
 // @supportURL   https://github.com/haithamaouati/BlackCat/issues
-// @updateURL    https://github.com/haithamaouati/BlackCat/userscript.js
+// @updateURL    https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js
 // ==/UserScript==
 
 (function () {
