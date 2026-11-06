@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         BlackCat 🐈‍⬛
 // @namespace    https://github.com/haithamaouati/BlackCat/
-// @version      1.0
+// @version      1.1
 // @description  Shows the video creator's region and the viewer's region in an alert
 // @author       Haitham Aouati
 // @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
 // @run-at       document-end
-// @match        https://*/*
+// @match        https://tiktok.com/*
 // @grant        none
 // @license      WTFPL
 // @downloadURL  https://github.com/haithamaouati/BlackCat/userscript.js
