@@ -159,7 +159,7 @@
             if (data) {
                 console.log(LOG, data);
                 say(
-                    'BlackCat 🐈‍⬛\n\n' +
+                    'BlackCat 🐈‍⬛ by Haitham Aouati\n\n' +
                     'Creator region:\n' + block(data.loc) +
                     '\n\nViewer region:\n' + block(data.viewer)
                 );
