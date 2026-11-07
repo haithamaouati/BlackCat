@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         BlackCat 🐈‍⬛
+// @name         BlackCat
 // @namespace    https://github.com/haithamaouati/BlackCat/
-// @version      1.1
+// @version      1.2
 // @description  Shows the video creator's region and the viewer's region in an alert
 // @author       Haitham Aouati
 // @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
@@ -159,6 +159,7 @@
             if (data) {
                 console.log(LOG, data);
                 say(
+                    'BlackCat 🐈‍⬛\n\n' +
                     'Creator region:\n' + block(data.loc) +
                     '\n\nViewer region:\n' + block(data.viewer)
                 );
