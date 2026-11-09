@@ -1,5 +1,5 @@
-# BalckCat
-**BalckCat** :black_cat: TikTok User Region Scraper
+# BlackCat
+**BlackCat** :black_cat: TikTok User Region Scraper
 
 <p align="center">
   <img width="125" height="125" src="logo.gif">
@@ -8,33 +8,33 @@
 
 ## Install
 
-To use the BalckCat script, follow these steps:
+To use the BlackCat script, follow these steps:
 
 1. Clone the repository:
 
     ```
-    git clone https://github.com/haithamaouati/BalckCat.git
+    git clone https://github.com/haithamaouati/BlackCat.git
     ```
 
-2. Change to the BalckCat directory:
+2. Change to the BlackCat directory:
 
     ```
-    cd BalckCat
+    cd BlackCat
     ```
     
 3. Change the file modes
     ```
-    chmod +x balckcat.sh
+    chmod +x blackcat.sh
     ```
     
 5. Run the script:
 
     ```
-    ./balckcat.sh
+    ./blackcat.sh
     ```
 ## Usage
 
-Usage: `./balckcat.sh -u, --url <url>`
+Usage: `./blackcat.sh -u, --url <url>`
 
 ## Dependencies
 The script requires the following dependencies:
@@ -55,7 +55,7 @@ Usage Instructions for [Via](https://viayoo.com/en/) Browser
 2. ​Navigate to `Settings` > `Scripts`.
 3. Enable `Enable scripts`.
 4. Click `+` > `New Script`.
-5. Paste the code provided above [userscript.js](https://raw.githubusercontent.com/haithamaouati/Eruda/main/eruda.user.js) and save.
+5. Paste the code provided above [userscript.js](https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js) and save.
 
 Usage Instructions for [Soul](https://play.google.com/store/apps/details?id=com.mycompany.app.soulbrowser&hl=en) Browser
 
@@ -89,10 +89,10 @@ https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=haithamaouati/BalckCat&type=date&legend=top-left)](https://www.star-history.com/#haithamaouati/BalckCat&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=haithamaouati/BlackCat&type=date&legend=top-left)](https://www.star-history.com/#haithamaouati/BlackCat&type=date&legend=top-left)
 
 #### Find this repository useful? ♥️
-Support it by joining the [stargazers](https://github.com/haithamaouati/BalckCat/stargazers). ⭐
+Support it by joining the [stargazers](https://github.com/haithamaouati/BlackCat/stargazers). ⭐
 
 If you want to help even more, please spread the word — share the project on X, Reddit, or with your community so more people discover it.
 
