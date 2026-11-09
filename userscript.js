@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         BlackCat
 // @namespace    https://github.com/haithamaouati/BlackCat/
-// @version      1.2
+// @version      1.4
 // @description  Shows the video creator's region and the viewer's region in an alert
 // @author       Haitham Aouati
 // @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
 // @run-at       document-end
-// @match        https://*/*
+// @match        https://*.tiktok.com/*
 // @grant        none
 // @license      WTFPL
 // @downloadURL  https://raw.githubusercontent.com/haithamaouati/BlackCat/main/userscript.js
@@ -18,7 +18,6 @@
     'use strict';
 
     if (window.top !== window.self) return;
-    if (!/(^|\.)tiktok\.com$/i.test(location.hostname)) return;
 
     const LOG = '[TikTok Region]';
     const MAX_TRIES = 10;
@@ -27,6 +26,7 @@
     let initialId = getVideoId();
     let lastHandledUrl = '';
     let runToken = 0;
+    let pageLoaded = document.readyState === 'complete';
 
     function say(msg) {
         try { alert(msg); } catch (e) { console.log(LOG, msg); }
@@ -58,7 +58,8 @@
 
     function block(code) {
         const r = regionInfo(code);
-        return `Emoji: ${r.emoji}\nCode: ${r.code}\nCountry: ${r.name}`;
+        if (r.code === 'N/A') return 'N/A';
+        return `${r.code} ${r.emoji} ${r.name}`;
     }
 
     // Walk a JSON tree: find locationCreated (matching the video ID) and the viewer region
@@ -130,6 +131,8 @@
     // ---------- Main ----------
 
     async function run() {
+        if (!pageLoaded && document.readyState !== 'complete') return;
+
         const url = location.href;
         const videoId = getVideoId();
         if (!videoId || url === lastHandledUrl) return;
@@ -159,9 +162,9 @@
             if (data) {
                 console.log(LOG, data);
                 say(
-                    'BlackCat 🐈‍⬛ by Haitham Aouati\n\n' +
-                    'Creator region:\n' + block(data.loc) +
-                    '\n\nViewer region:\n' + block(data.viewer)
+                    'BlackCat 🐈‍⬛\n\n' +
+                    'Creator region: ' + block(data.loc) + '\n' +
+                    'Viewer region: ' + block(data.viewer)
                 );
             } else if (fetchError) {
                 fail('Region not found.\nFallback request failed:', fetchError);
@@ -176,6 +179,11 @@
     function onNav() { run(); }
 
     try {
+        window.addEventListener('load', () => {
+            pageLoaded = true;
+            onNav();
+        });
+
         ['pushState', 'replaceState'].forEach(fn => {
             const orig = history[fn];
             history[fn] = function () {
@@ -185,7 +193,6 @@
             };
         });
         window.addEventListener('popstate', onNav);
-        window.addEventListener('load', onNav);
         setInterval(() => { if (location.href !== lastHandledUrl) onNav(); }, 1500);
     } catch (e) {
         fail('Failed to set up navigation hooks:', e);
@@ -193,5 +200,8 @@
 
     window.addEventListener('unhandledrejection', e => fail('Unhandled promise error:', e.reason));
 
-    run();
+    if (document.readyState === 'complete') {
+        pageLoaded = true;
+        run();
+    }
 })();
