@@ -1,10 +1,9 @@
 // ==UserScript==
-// @name         BlackCat
+// @name         TikTok User Region
 // @namespace    https://github.com/haithamaouati/BlackCat/
-// @version      1.4
+// @version      1.5
 // @description  Shows the video creator's region and the viewer's region in an alert
-// @author       Haitham Aouati
-// @icon         https://raw.githubusercontent.com/haithamaouati/BlackCat/refs/heads/main/favicon.ico
+// @author       Haitham Aouati         
 // @run-at       document-end
 // @match        https://*.tiktok.com/*
 // @grant        none
@@ -162,7 +161,7 @@
             if (data) {
                 console.log(LOG, data);
                 say(
-                    'BlackCat 🐈‍⬛\n\n' +
+                    'TikTok User Region 🌐\n\n' +
                     'Creator region: ' + block(data.loc) + '\n' +
                     'Viewer region: ' + block(data.viewer)
                 );
